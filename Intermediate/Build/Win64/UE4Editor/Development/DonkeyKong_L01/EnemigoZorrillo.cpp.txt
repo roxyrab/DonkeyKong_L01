@@ -1,0 +1,5 @@
+D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\Definitions.DonkeyKong_L01.h
+D:\src_SIS457\DonkeyKong_L01\Source\DonkeyKong_L01\EnemigoZorrillo.h
+D:\src_SIS457\DonkeyKong_L01\Source\DonkeyKong_L01\Enemigo.h
+D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Inc\DonkeyKong_L01\Enemigo.generated.h
+D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Inc\DonkeyKong_L01\EnemigoZorrillo.generated.h
