@@ -6,6 +6,7 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Obstaculo.h"
 
 ADonkeyKong_L01Character::ADonkeyKong_L01Character()
 {
@@ -53,10 +54,17 @@ void ADonkeyKong_L01Character::SetupPlayerInputComponent(class UInputComponent* 
 	// set up gameplay key bindings
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAction("Parar", IE_Pressed, this, &ADonkeyKong_L01Character::Parar);
+	PlayerInputComponent->BindAction("Parar", IE_Released, this, &ADonkeyKong_L01Character::Parar);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ADonkeyKong_L01Character::MoveRight);
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ADonkeyKong_L01Character::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ADonkeyKong_L01Character::TouchStopped);
+}
+
+void ADonkeyKong_L01Character::Parar()
+{
+	obstaculo01->setIncrementoZ(0.0f);
 }
 
 void ADonkeyKong_L01Character::MoveRight(float Value)

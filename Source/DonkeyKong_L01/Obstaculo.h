@@ -35,4 +35,7 @@ protected:
 	FVector posicionFinal;
 	float incrementoZ;
 	
+public:
+	FORCEINLINE UStaticMeshComponent* GetMeshObstaculo() const { return MeshObstaculo; }
+	FORCEINLINE void setIncrementoZ(float incremento) { incrementoZ = incremento; }
 };

@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "DonkeyKong_L01Character.generated.h"
 
+class AObstaculo;
+
 UCLASS(config=Game)
 class ADonkeyKong_L01Character : public ACharacter
 {
@@ -34,6 +36,8 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+	void Parar();
+
 
 public:
 	ADonkeyKong_L01Character();
@@ -42,4 +46,11 @@ public:
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+protected:
+	AObstaculo* obstaculo01;
+
+public:
+	/** Returns obstaculo01 subobject **/
+	FORCEINLINE AObstaculo* GetObstaculo() const { return obstaculo01; }
+	FORCEINLINE void SetObstaculo(AObstaculo* _obstaculo) { obstaculo01 = _obstaculo; }
 };
