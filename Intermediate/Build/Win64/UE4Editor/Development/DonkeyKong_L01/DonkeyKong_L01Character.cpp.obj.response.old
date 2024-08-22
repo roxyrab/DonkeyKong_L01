@@ -262,12 +262,9 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\DonkeyKong_L01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\DonkeyKong_L01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\DonkeyKong_L01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\src_SIS457\DonkeyKong_L01\Source\DonkeyKong_L01\Obstaculo.cpp"
-/FI"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\Definitions.DonkeyKong_L01.h"
-/Fo"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\Obstaculo.cpp.obj"
+"D:\src_SIS457\DonkeyKong_L01\Source\DonkeyKong_L01\DonkeyKong_L01Character.cpp"
+/FI"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\Definitions.h"
+/Fo"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01Character.cpp.obj"
 /TP
 /GR-
 /W4
