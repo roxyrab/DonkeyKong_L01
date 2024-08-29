@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Obstaculo.h"
+#include "DonkeyKong_L01GameMode.h"
 
 ADonkeyKong_L01Character::ADonkeyKong_L01Character()
 {
@@ -42,6 +43,7 @@ ADonkeyKong_L01Character::ADonkeyKong_L01Character()
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
 	GetCharacterMovement()->MaxFlySpeed = 600.f;
 
+	detener = false;
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
@@ -55,7 +57,7 @@ void ADonkeyKong_L01Character::SetupPlayerInputComponent(class UInputComponent* 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAction("Parar", IE_Pressed, this, &ADonkeyKong_L01Character::Parar);
-	PlayerInputComponent->BindAction("Parar", IE_Released, this, &ADonkeyKong_L01Character::Parar);
+	//PlayerInputComponent->BindAction("Parar", IE_Released, this, &ADonkeyKong_L01Character::Parar);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ADonkeyKong_L01Character::MoveRight);
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ADonkeyKong_L01Character::TouchStarted);
@@ -64,7 +66,20 @@ void ADonkeyKong_L01Character::SetupPlayerInputComponent(class UInputComponent* 
 
 void ADonkeyKong_L01Character::Parar()
 {
-	obstaculo01->setIncrementoZ(0.0f);
+	//obstaculo01->setIncrementoZ(0.0f);
+	detener = !detener;
+	obstaculo01->setDetener(detener);
+}
+
+void ADonkeyKong_L01Character::BeginPlay()
+{
+	Super::BeginPlay();
+
+	ADonkeyKong_L01GameMode* GameMode = Cast<ADonkeyKong_L01GameMode>(GetWorld()->GetAuthGameMode());
+	if (GameMode)
+	{
+		obstaculo01 = GameMode->obstaculo01;
+	}
 }
 
 void ADonkeyKong_L01Character::MoveRight(float Value)

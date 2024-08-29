@@ -19,6 +19,7 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+public:
 	AObstaculo* obstaculo01;
 	ADonkeyKong_L01Character* player01;
 };

@@ -34,8 +34,11 @@ protected:
 	FVector posicionActual;
 	FVector posicionFinal;
 	float incrementoZ;
-	
+	bool detener;
+
 public:
+	
 	FORCEINLINE UStaticMeshComponent* GetMeshObstaculo() const { return MeshObstaculo; }
 	FORCEINLINE void setIncrementoZ(float incremento) { incrementoZ = incremento; }
+	FORCEINLINE void setDetener(bool _detener) { detener = _detener; }
 };

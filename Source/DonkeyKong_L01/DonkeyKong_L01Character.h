@@ -23,6 +23,8 @@ class ADonkeyKong_L01Character : public ACharacter
 
 protected:
 
+	void BeginPlay() override;
+
 	/** Called for side to side input */
 	void MoveRight(float Val);
 
@@ -37,7 +39,7 @@ protected:
 	// End of APawn interface
 
 	void Parar();
-
+	bool detener;
 
 public:
 	ADonkeyKong_L01Character();
@@ -46,7 +48,7 @@ public:
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
-protected:
+public:
 	AObstaculo* obstaculo01;
 
 public:

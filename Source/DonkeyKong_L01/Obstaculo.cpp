@@ -19,7 +19,7 @@ AObstaculo::AObstaculo()
 	// Supongamos que tienes un puntero al actor llamado MyActor
 	FVector NewScale(2.0f, 0.25f, 2.0f); // Cambia estos valores según tus necesidades
 	SetActorScale3D(NewScale);
-
+	
 	/*zPosicionInicial = 0.0f;
 	zPosicionActual = 0.0f;
 	zPosicionFinal = 0.0f;
@@ -37,7 +37,7 @@ void AObstaculo::BeginPlay()
 	posicionFinal = posicionActual + FVector(0.0f, 0.0f, 200.0f);
 	incrementoZ = 2.0f;
 	subir = false;
-
+	setDetener(false);
 	
 }
 
@@ -48,29 +48,29 @@ void AObstaculo::Tick(float DeltaTime)
 
 	//zPosicionActual = GetActorLocation().Z;
 
-
-	if (!subir)
-	{
-		if (posicionActual.Z < posicionFinal.Z)
+	if (!detener) {
+		if (!subir)
 		{
-			posicionActual.Z += incrementoZ;
+			if (posicionActual.Z < posicionFinal.Z)
+			{
+				posicionActual.Z += incrementoZ;
+			}
+			else
+			{
+				subir = true;
+			}
 		}
 		else
 		{
-			subir = true;
+			if (posicionActual.Z > posicionInicial.Z)
+			{
+				posicionActual.Z -= incrementoZ;
+			}
+			else {
+				subir = false;
+			}
 		}
 	}
-	else
-	{
-		if (posicionActual.Z > posicionInicial.Z)
-		{
-			posicionActual.Z -= incrementoZ;
-		}
-		else {
-			subir = false;
-		}
-	}
-	
 	/*zPosicionActual += zIncrementoZ;*/
 	SetActorLocation(posicionActual);
 
