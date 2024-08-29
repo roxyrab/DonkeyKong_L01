@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\DonkeyKong_L01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\ComponentePlataforma.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01Character.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01GameMode.cpp.obj"
@@ -14,6 +15,7 @@
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\EnemigoPuercoEspin.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\EnemigoZorrillo.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\Obstaculo.cpp.obj"
+"D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\ComponentePlataforma.gen.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01.init.gen.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01Character.gen.cpp.obj"
 "D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Development\DonkeyKong_L01\DonkeyKong_L01GameMode.gen.cpp.obj"
