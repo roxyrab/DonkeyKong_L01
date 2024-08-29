@@ -7,6 +7,7 @@
 #include "DonkeyKong_L01GameMode.generated.h"
 
 class AObstaculo;
+class AComponentePlataforma;
 class ADonkeyKong_L01Character;
 
 UCLASS(minimalapi)
@@ -22,6 +23,13 @@ protected:
 public:
 	AObstaculo* obstaculo01;
 	ADonkeyKong_L01Character* player01;
+	AComponentePlataforma* cp01;
+	AComponentePlataforma* cp02;
+	AComponentePlataforma* cp03;
+	AComponentePlataforma* cp04;
+	AComponentePlataforma* cp05;
+
+	TArray<AComponentePlataforma*> componentesPlataforma;
 };
 
 

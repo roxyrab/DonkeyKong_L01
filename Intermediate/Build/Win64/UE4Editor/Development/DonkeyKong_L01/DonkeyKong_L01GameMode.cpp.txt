@@ -15,3 +15,5 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Inc\DonkeyKong_L01\DonkeyKong_L01Character.generated.h
 D:\src_SIS457\DonkeyKong_L01\Source\DonkeyKong_L01\Obstaculo.h
 D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Inc\DonkeyKong_L01\Obstaculo.generated.h
+D:\src_SIS457\DonkeyKong_L01\Source\DonkeyKong_L01\ComponentePlataforma.h
+D:\src_SIS457\DonkeyKong_L01\Intermediate\Build\Win64\UE4Editor\Inc\DonkeyKong_L01\ComponentePlataforma.generated.h

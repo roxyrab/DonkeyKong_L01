@@ -5,6 +5,7 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Obstaculo.h"
 #include "DonkeyKong_L01Character.h"
+#include "ComponentePlataforma.h"
 
 ADonkeyKong_L01GameMode::ADonkeyKong_L01GameMode()
 {
@@ -36,4 +37,41 @@ void ADonkeyKong_L01GameMode::BeginPlay()
 		{
 			player01->SetObstaculo(obstaculo01);
 		}
+
+		FVector posicionInicial = FVector(1160.0f, -500.0f, 500.f);
+		FRotator rotacionInicial = FRotator(0.0f, 0.0f, 15);
+		FTransform SpawnLocationCP;
+		
+		for (int npp = 0; npp < 5; npp++) {
+			rotacionInicial.Roll = rotacionInicial.Roll * -1;
+			posicionInicial.Z = posicionInicial.Z + 250;
+
+			SpawnLocationCP.SetRotation(FQuat(rotacionInicial));
+			for (int ncp = 0; ncp < 5; ncp++) {
+				SpawnLocationCP.SetLocation(FVector(posicionInicial.X, posicionInicial.Y * ncp, posicionInicial.Z));
+				componentesPlataforma.Add(GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP));
+			}
+		}
+
+		//FTransform SpawnLocationCP;
+		//AComponentePlataforma* cp;
+		//SpawnLocationCP.SetLocation(FVector(1160.0f, -500.0f, 500.0f));
+		//SpawnLocationCP.SetRotation(FQuat(FRotator(0.0f, 0.0f, -15.0f)));
+		////cp = GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP);
+		//componentesPlataforma.Add(GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP));
+		////componentesPlataforma.Add(cp);
+		//SpawnLocationCP.SetLocation(FVector(1160.0f, 50.0f, 650.0f));
+		//cp = GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP);
+		//componentesPlataforma.Add(cp);
+		//SpawnLocationCP.SetLocation(FVector(1160.0f, 600.0f, 800.0f));
+		//cp = GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP);
+		//componentesPlataforma.Add(cp);
+		//SpawnLocationCP.SetLocation(FVector(1160.0f, 1150.0f, 950.0f));
+		//cp = GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP);
+		//componentesPlataforma.Add(cp);
+		//SpawnLocationCP.SetLocation(FVector(1160.0f, 500.0f, 1250.0f));
+		//SpawnLocationCP.SetRotation(FQuat(FRotator(0.0f, 0.0f, 15.0f)));
+		//cp = GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP);
+		//componentesPlataforma.Add(cp);
+
 }

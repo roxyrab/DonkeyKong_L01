@@ -21,8 +21,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	PROPERTY(EditAnywhere, Category = "Mesh")
-	UStaticMeshComponent* meshComponentePlataforma;
+	//PROPERTY(EditAnywhere, Category = "Mesh")
+	UStaticMeshComponent* meshPlataforma;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
