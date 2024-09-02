@@ -38,19 +38,28 @@ void ADonkeyKong_L01GameMode::BeginPlay()
 			player01->SetObstaculo(obstaculo01);
 		}
 
-		FVector posicionInicial = FVector(1160.0f, -500.0f, 500.f);
-		FRotator rotacionInicial = FRotator(0.0f, 0.0f, 15);
+		FVector posicionInicial = FVector(1160.0f, -1100.0f, 400.f);
+		FRotator rotacionInicial = FRotator(0.0f, 0.0f, 10.0f);
 		FTransform SpawnLocationCP;
-		
+		float anchoComponentePlataforma = 600.0f;
+		float incrementoAltoComponentePlataforma = -105.0f;
+		float incrementoAltoEntrePisos = 900.0f;
+		float incrementoInicioPiso = 100.0f;
+
 		for (int npp = 0; npp < 5; npp++) {
 			rotacionInicial.Roll = rotacionInicial.Roll * -1;
-			posicionInicial.Z = posicionInicial.Z + 250;
-
+			incrementoAltoComponentePlataforma = incrementoAltoComponentePlataforma * -1;
+			incrementoInicioPiso = incrementoInicioPiso * -1;
+			
 			SpawnLocationCP.SetRotation(FQuat(rotacionInicial));
 			for (int ncp = 0; ncp < 5; ncp++) {
-				SpawnLocationCP.SetLocation(FVector(posicionInicial.X, posicionInicial.Y * ncp, posicionInicial.Z));
+				posicionInicial.Z = posicionInicial.Z + incrementoAltoComponentePlataforma;
+				SpawnLocationCP.SetLocation(FVector(posicionInicial.X, posicionInicial.Y + anchoComponentePlataforma * ncp, posicionInicial.Z ));
 				componentesPlataforma.Add(GetWorld()->SpawnActor<AComponentePlataforma>(AComponentePlataforma::StaticClass(), SpawnLocationCP));
 			}
+			posicionInicial.Z = posicionInicial.Z + incrementoAltoEntrePisos;
+
+			posicionInicial.Y = posicionInicial.Y + incrementoInicioPiso;
 		}
 
 		//FTransform SpawnLocationCP;

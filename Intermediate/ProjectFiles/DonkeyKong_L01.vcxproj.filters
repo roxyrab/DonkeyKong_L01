@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\DonkeyKong_L01.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{63E366EF-BCA6-4CE8-9A31-10040A68318C}</UniqueIdentifier>
+      <UniqueIdentifier>{FDF1AC5D-908B-4F9B-983C-4707E0A99909}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\DonkeyKong_L01.Target.cs">
       <Filter>Source</Filter>
@@ -13,8 +13,13 @@
     </None>
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\CMakeCache.txt" />
+    <None Include="..\..\CMakeLists.txt" />
+    <None Include="..\..\cmake_install.cmake" />
+    <None Include="..\..\launch.json" />
+    <None Include="..\..\tasks.json" />
     <Filter Include="Config">
-      <UniqueIdentifier>{B4463730-4EE3-4E9D-B685-0B67E1F1B918}</UniqueIdentifier>
+      <UniqueIdentifier>{19DCFFCA-6FDC-4B24-AB16-4E91307FD173}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +37,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\DonkeyKong_L01">
-      <UniqueIdentifier>{BEA14AA9-6220-4047-A20A-83EB8583653E}</UniqueIdentifier>
+      <UniqueIdentifier>{152A5685-EF64-4732-9073-9E372C105DE4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\DonkeyKong_L01\ComponentePlataforma.cpp">
       <Filter>Source\DonkeyKong_L01</Filter>
