@@ -6,6 +6,7 @@
 #include "Obstaculo.h"
 #include "DonkeyKong_L01Character.h"
 #include "ComponentePlataforma.h"
+#include "Barril.h"
 
 ADonkeyKong_L01GameMode::ADonkeyKong_L01GameMode()
 {
@@ -13,7 +14,8 @@ ADonkeyKong_L01GameMode::ADonkeyKong_L01GameMode()
 	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/SideScrollerCPP/Blueprints/SideScrollerCharacter"));
 	obstaculo01 = nullptr;
 	player01 = nullptr;
-	
+	numeroBarriles = 0;
+
 	if (PlayerPawnBPClass.Class != nullptr)
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
@@ -64,4 +66,27 @@ void ADonkeyKong_L01GameMode::BeginPlay()
 		posicionInicial.Y = posicionInicial.Y + incrementoInicioPiso;
 	}
 
+	//SpawnBarril();
+	GetWorldTimerManager().SetTimer(SpawnBarrilTimerHandle, this, &ADonkeyKong_L01GameMode::SpawnBarril, 5.0f, true);
+	//SpawnLocation.SetLocation(FVector(1160.0f, 550.0f, 800.0f));
+	//SpawnLocation.SetRotation(FQuat(FRotator(90.0f, 0.0f, 0.0f)));
+	//barril01 = GetWorld()->SpawnActor<ABarril>(ABarril::StaticClass(), SpawnLocation);
+
+
+}
+
+
+
+void ADonkeyKong_L01GameMode::SpawnBarril()
+{
+	if (numeroBarriles < 5) {
+
+		// Definir la ubicación y rotación para el nuevo barril
+		FVector SpawnLocation = FVector(1160.0f, 550.0f, 800.0f); // Ajusta según sea necesario
+		FRotator SpawnRotation = FRotator(90.0f, 0.0f, 0.0f);
+
+		// Crear el actor barril
+		barriles.Add(GetWorld()->SpawnActor<ABarril>(ABarril::StaticClass(), SpawnLocation, SpawnRotation));
+		numeroBarriles++;
+	}
 }

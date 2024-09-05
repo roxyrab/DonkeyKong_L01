@@ -9,6 +9,7 @@
 class AObstaculo;
 class AComponentePlataforma;
 class ADonkeyKong_L01Character;
+class ABarril;
 
 UCLASS(minimalapi)
 class ADonkeyKong_L01GameMode : public AGameModeBase
@@ -23,13 +24,22 @@ protected:
 public:
 	AObstaculo* obstaculo01;
 	ADonkeyKong_L01Character* player01;
-	AComponentePlataforma* cp01;
+	/*AComponentePlataforma* cp01;
 	AComponentePlataforma* cp02;
 	AComponentePlataforma* cp03;
 	AComponentePlataforma* cp04;
-	AComponentePlataforma* cp05;
+	AComponentePlataforma* cp05;*/
+	//ABarril* barril01;
 
 	TArray<AComponentePlataforma*> componentesPlataforma;
+	TArray<ABarril*> barriles;
+
+public:
+	void SpawnBarril();
+
+private:
+	FTimerHandle SpawnBarrilTimerHandle;
+	int numeroBarriles;
 };
 
 
