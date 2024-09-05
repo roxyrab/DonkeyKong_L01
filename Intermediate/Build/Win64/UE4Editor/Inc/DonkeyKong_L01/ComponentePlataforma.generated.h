@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAComponentePlataforma(); \
 	friend struct Z_Construct_UClass_AComponentePlataforma_Statics; \
 public: \
-	DECLARE_CLASS(AComponentePlataforma, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DonkeyKong_L01"), NO_API) \
+	DECLARE_CLASS(AComponentePlataforma, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DonkeyKong_L01"), NO_API) \
 	DECLARE_SERIALIZER(AComponentePlataforma)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAComponentePlataforma(); \
 	friend struct Z_Construct_UClass_AComponentePlataforma_Statics; \
 public: \
-	DECLARE_CLASS(AComponentePlataforma, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DonkeyKong_L01"), NO_API) \
+	DECLARE_CLASS(AComponentePlataforma, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DonkeyKong_L01"), NO_API) \
 	DECLARE_SERIALIZER(AComponentePlataforma)
 
 

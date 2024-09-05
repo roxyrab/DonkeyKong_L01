@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeComponentePlataforma() {}
 // Cross Module References
 	DONKEYKONG_L01_API UClass* Z_Construct_UClass_AComponentePlataforma_NoRegister();
 	DONKEYKONG_L01_API UClass* Z_Construct_UClass_AComponentePlataforma();
-	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_DonkeyKong_L01();
 // End Cross Module References
 	void AComponentePlataforma::StaticRegisterNativesAComponentePlataforma()
@@ -35,12 +35,11 @@ void EmptyLinkFunctionForGeneratedCodeComponentePlataforma() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AComponentePlataforma_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_ACharacter,
+		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_DonkeyKong_L01,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AComponentePlataforma_Statics::Class_MetaDataParams[] = {
-		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "ComponentePlataforma.h" },
 		{ "ModuleRelativePath", "ComponentePlataforma.h" },
 	};
@@ -50,7 +49,7 @@ void EmptyLinkFunctionForGeneratedCodeComponentePlataforma() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AComponentePlataforma_Statics::ClassParams = {
 		&AComponentePlataforma::StaticClass,
-		"Game",
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
@@ -72,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeComponentePlataforma() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AComponentePlataforma, 1098870455);
+	IMPLEMENT_CLASS(AComponentePlataforma, 3562472587);
 	template<> DONKEYKONG_L01_API UClass* StaticClass<AComponentePlataforma>()
 	{
 		return AComponentePlataforma::StaticClass();

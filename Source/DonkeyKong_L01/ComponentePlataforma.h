@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "GameFramework/Actor.h"
 #include "ComponentePlataforma.generated.h"
 
 class UStaticMeshComponent;
 
 UCLASS()
-class DONKEYKONG_L01_API AComponentePlataforma : public ACharacter
+class DONKEYKONG_L01_API AComponentePlataforma : public AActor
 {
 	GENERATED_BODY()
 
@@ -27,7 +27,5 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	
 };

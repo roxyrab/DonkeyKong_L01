@@ -35,10 +35,4 @@ void AComponentePlataforma::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void AComponentePlataforma::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
 
